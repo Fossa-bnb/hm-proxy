@@ -6,7 +6,7 @@
   <body>
     <div id="photogallery"></div>
     <div id="reservations"></div>
-    <!--<script src="http://localhost:3000"></script>-->
+    <script src="http://localhost:3000/dist/bundle.js"></script>
     <script src="/scripts/react/umd/react.development.js"></script>
     <script src="/scripts/react-dom/umd/react-dom.development.js"></script>
     <script src="http://localhost:3002/dist/bundle.js"></script>
@@ -14,6 +14,10 @@
       const id = +window.location.pathname.split('/')[1]
     </script>
     <script>
+      ReactDOM.render(
+        React.createElement(window.Photos, { myId: id }),
+        document.getElementById('photogallery')
+      );
       ReactDOM.render(
         React.createElement(Window.Reservations, { id }),
         document.getElementById('reservations')
