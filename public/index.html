@@ -11,8 +11,11 @@
     <script src="/scripts/react-dom/umd/react-dom.development.js"></script>
     <script src="http://localhost:3002/dist/bundle.js"></script>
     <script>
+      const id = +window.location.pathname.split('/')[1]
+    </script>
+    <script>
       ReactDOM.render(
-        React.createElement(Window.Reservations, {id: 1}),
+        React.createElement(Window.Reservations, { id }),
         document.getElementById('reservations')
       );
     </script>
